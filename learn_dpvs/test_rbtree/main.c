@@ -62,6 +62,7 @@ int main(int argc, char *argv[])
 	if (rbnode){
 		printf("elem already existed: node:%p value:%d\n", rbnode, *(int *)rbnode->data);
 		util_rbtree_delete(&rbtree, rbnode);
+		free(rbnode); //add by zhaocw at 2022.1.28
 		rbnode = util_rbtree_search(&rbtree, hash_func(arr[N]));
 		printf("elem delete %s\n", !rbnode?"success":"fail");
 	}
