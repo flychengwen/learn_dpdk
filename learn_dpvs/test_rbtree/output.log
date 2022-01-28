@@ -1,0 +1,58 @@
+make clean;make;./a.out
+make[1]: Entering directory '/home/zcw'
+rm -rf a.out util_rbtree.o main.o
+#find . -name \*.o | xargs rm -rf {}
+make[1]: Leaving directory '/home/zcw'
+make[1]: Entering directory '/home/zcw'
+gcc -g -c util_rbtree.c -o util_rbtree.o 
+gcc -g -c main.c -o main.o 
+gcc -o a.out util_rbtree.o main.o
+make[1]: Leaving directory '/home/zcw'
+ 83  86  77  15  93  35  86  92 
+ 49  21  62  27  90  59  63  26 
+
+
+create rbtree:
+insert elment: 83
+insert elment: 86
+insert elment: 77
+insert elment: 15
+insert elment: 93
+insert elment: 35
+insert elment: 86
+insert elment: 92
+insert elment: 49
+insert elment: 21
+insert elment: 62
+insert elment: 27
+insert elment: 90
+insert elment: 59
+insert elment: 63
+insert elment: 26
+elem already existed: node:0x559172da4670 value:26
+elem delete success
+
+test util_rbtree_search, and input key:found key:49 value:49
+
+test util_rbtree_lookup, and input key:found key:55 value:59
+
+test rbtree_mid_travel:
+ 15  21  27  35  49  59  62  63 
+ 77  83  86  86  90  92  93 
+
+delete rbtree:
+remove element: 83
+remove element: 86
+remove element: 86
+remove element: 35
+remove element: 49
+remove element: 59
+remove element: 62
+remove element: 63
+remove element: 77
+remove element: 90
+remove element: 92
+remove element: 21
+remove element: 27
+remove element: 93
+remove element: 15
